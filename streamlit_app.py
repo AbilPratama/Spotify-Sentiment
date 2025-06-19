@@ -30,7 +30,7 @@ if st.button("Prediksi Sentimen"):
         vector = vectorizer.transform([cleaned])
         prediction = model.predict(vector)[0]
 
-        if prediction == "Positive":
+        if prediction == 1:
             st.success("Hasil Prediksi: Sentimen Positif 😊")
         else:
             st.error("Hasil Prediksi: Sentimen Negatif 😞")
